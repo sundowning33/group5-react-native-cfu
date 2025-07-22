@@ -15,7 +15,7 @@ import {
     ImageBackground
   } from 'react-native'
   import { useState, useEffect } from 'react'
-  import styles from "../styles.js"
+  import {styles} from "../styles.js"
 
 
 

@@ -20,9 +20,9 @@ const Tab = createBottomTabNavigator();
 function StartStack () {
   return (
     <Stack.Navigator initialRouteName='Login'>
-      <Stack.Screen name='Create Profile' component={CreateProfile} />
-      <Stack.Screen name='Login' component={LoginScreen} />
-      <Stack.Screen name='Create Group' component={CreateGroup} />
+      <Stack.Screen name='Create Profile' component={CreateProfile} options={{ headerShown: false }}/>
+      <Stack.Screen name='Login' component={LoginScreen} options={{ headerShown: false }}/>
+      <Stack.Screen name='Create Group' component={CreateGroup} options={{ headerShown: false }}/>
     </Stack.Navigator>
   )
 }
