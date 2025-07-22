@@ -15,36 +15,36 @@ import {
   ImageBackground
 } from 'react-native'
 import { useState, useEffect } from 'react'
-import { styles } from '../styles'
-import { useNavigation } from 'App.js'
-import { StartStack } from 'App.js'
+import { styles } from "../styles.js"
+import { useNavigation } from '@react-navigation/native'
 
-const LoginScreen = () => {
+
+export default function LoginScreen() {
   const navigation = useNavigation()
 
-  const [login, setLogin] = useStack('')
+  const [login, setLogin] = useState('')
   const bgimg = './assets/loginbg.jpg'
 
   const [password, setPassword] = useState('')
   const [accessCode, setAccessCode] = useState('')
 
   const handleNext = () => {
-    navigation.navigate('CreateProfile', {
-      login,
-      password,
-      accessCode
-    })
+    navigation.navigate('Create Profile',)
+    // {
+    //   login,
+    //   password,
+    //   accessCode
+    // })
   }
 
   return (
     // i am gonna add documentation later so feel free to add comments
-    <ScrollView>
+    <ScrollView style={styles.container}>
       <ImageBackground // img bg should be like the view component and encompass the components inside it
         source={bgimg}
         style={styles.background}
-        imageStyle={styles.imageStyle}
-        resizeMode="cover"
-        opacity="0.3" // TO EDIT THE SATURATION IMPORTANT
+        opacity='0.3'
+        // imageStyle={styles.imageStyle}
         alt="A pretty low saturated image of marble with abstract streaks of burgundy and purple and golden highlights across the center."
       >
         <KeyboardAvoidingView style={styles.container}>
@@ -100,5 +100,3 @@ const LoginScreen = () => {
     </ScrollView>
   )
 }
-
-export default LoginScreen
