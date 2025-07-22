@@ -1,0 +1,104 @@
+import {
+  Text,
+  ScrollView,
+  Image,
+  View,
+  Button,
+  Pressable,
+  TouchableOpacity,
+  Alert,
+  Switch,
+  TextInput,
+  SafeAreaView,
+  KeyboardAvoidingView,
+  FlatList,
+  ImageBackground
+} from 'react-native'
+import { useState, useEffect } from 'react'
+import { styles } from '../styles'
+import { useNavigation } from 'App.js'
+import { StartStack } from 'App.js'
+
+const LoginScreen = () => {
+  const navigation = useNavigation()
+
+  const [login, setLogin] = useStack('')
+  const bgimg = './assets/loginbg.jpg'
+
+  const [password, setPassword] = useState('')
+  const [accessCode, setAccessCode] = useState('')
+
+  const handleNext = () => {
+    navigation.navigate('CreateProfile', {
+      login,
+      password,
+      accessCode
+    })
+  }
+
+  return (
+    // i am gonna add documentation later so feel free to add comments
+    <ScrollView>
+      <ImageBackground // img bg should be like the view component and encompass the components inside it
+        source={bgimg}
+        style={styles.background}
+        imageStyle={styles.imageStyle}
+        resizeMode="cover"
+        opacity="0.3" // TO EDIT THE SATURATION IMPORTANT
+        alt="A pretty low saturated image of marble with abstract streaks of burgundy and purple and golden highlights across the center."
+      >
+        <KeyboardAvoidingView style={styles.container}>
+          <Text accessibilityRole='header' style={styles.header}>
+            Log In
+          </Text>
+
+          <TextInput
+            label='Email or Username'
+            value={login}
+            onChangeText={setLogin}
+            accessibilityLabel='Email or Username'
+          />
+
+          <TextInput
+            label='Password'
+            value={password}
+            onChangeText={setPassword}
+            secureTextEntry
+            accessibilityLabel='Password'
+          />
+
+          <TextInput
+            label='Organization Access Code'
+            value={accessCode} // i think all the values should be added from firebase but im making these through nav for now
+            onChangeText={setAccessCode}
+            accessibilityLabel='Organization Access Code'
+          />
+
+          <Pressable
+            onPress={handleNext}
+            style={styles.nextButton}
+            accessibilityRole='button'
+          >
+            <Text style={styles.buttonText}>Next</Text>
+          </Pressable>
+
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Create Profile')}
+            accessibilityRole='link'
+          >
+            <Text style={styles.linkText}>Create Account instead</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Create Group')}
+            accessibilityRole='link'
+          >
+            <Text style={styles.linkText}>Create Group instead</Text>
+          </TouchableOpacity>
+        </KeyboardAvoidingView>
+      </ImageBackground>
+    </ScrollView>
+  )
+}
+
+export default LoginScreen
