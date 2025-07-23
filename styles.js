@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-const mainFontFam = 'Noto Serif' // i will change it later
+const mainFontFam = 'Noto Sans' // i will change it later
 
 export const styles = StyleSheet.create({
   //Stelmakh: Login page, maybe some other pages
@@ -73,6 +73,9 @@ export const styles = StyleSheet.create({
     marginLeft:20,
     
   },
+  settingsBlock:{
+    
+  },
   
   //Stelmakh: putting the explore page styles separately for now, can be combined with the rest on a later date
   
@@ -115,6 +118,4 @@ export const styles = StyleSheet.create({
     color: 'gray',
     fontFamily: mainFontFam,
   },
-
-
 })
