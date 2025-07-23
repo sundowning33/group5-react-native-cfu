@@ -41,8 +41,6 @@ function SettingsStack() {
   return (
     <Tab.Navigator initialRouteName='Settings'>
       <Tab.Screen name='Settings' component={SettingsScreen} />
-      {/* we will add: dark mode, design, accessibility, notifications, language maybe;
-      account options (password change) log out; help support, about us, contact us, faq */}
     </Tab.Navigator>
   )
 }
