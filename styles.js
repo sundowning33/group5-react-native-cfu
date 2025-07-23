@@ -54,7 +54,7 @@ export const styles = StyleSheet.create({
     marginVertical: 5,
     marginHorizontal: 10,
     marginLeft: "80%",
-    backgroundColor: '#C63B62',
+    backgroundColor: '#5A3353',
     height: 30,
     width: "15%",
 
