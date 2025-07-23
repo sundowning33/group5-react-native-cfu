@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native'
 const mainFontFam = 'Noto Sans' // i will change it later
 
 export const styles = StyleSheet.create({
+  //Stelmakh: Login page, maybe some other pages
   background: {
     flex: 1,
     height: '100%',
@@ -54,7 +55,7 @@ export const styles = StyleSheet.create({
     marginVertical: 5,
     marginHorizontal: 10,
     marginLeft: "80%",
-    backgroundColor: '#5A3353',
+    backgroundColor: '#C63B62',
     height: 30,
     width: "15%",
 
@@ -72,12 +73,49 @@ export const styles = StyleSheet.create({
     marginLeft:20,
     
   },
-
-
-
-
-
   settingsBlock:{
+    
+  },
+  
+  //Stelmakh: putting the explore page styles separately for now, can be combined with the rest on a later date
+  
+  exploreView: {
+    margin: 20,
+    display: flex,
+    flexDirection: 'column',
 
+  },
+  profileBoxView: {
+    display: flex,
+    flexDirection: 'row',
+    height: 100,
+    margin: 20,
+
+  },
+  profileImgView:{
+    display: flex,
+    margin: 10,
+    flex: 1,
+
+  },
+  profileTextBox:{
+    display: flex,
+    flexDirection: 'column',
+    flex: 2,
+
+  },
+  usernameText:{
+    display: flex,
+    flex:1,
+    margin: 5,
+    color: 'black',
+    fontFamily: mainFontFam,
+  },
+  hashtagsText:{
+    display: flex,
+    flex:1,
+    margin: 5,
+    color: 'gray',
+    fontFamily: mainFontFam,
   },
 })
