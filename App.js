@@ -48,7 +48,7 @@ function SettingsStack() {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='StartStack'>
+      <Stack.Navigator initialRouteName='Settings'>
         <Stack.Screen name='StartStack' component={StartStack} />
         <Stack.Screen name='MainTabs' component={MainTabs} />
         <Stack.Screen name='Profile' component={ProfileScreen} />
