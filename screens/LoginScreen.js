@@ -80,7 +80,7 @@ export default function LoginScreen() {
         </View>
 
         <Pressable
-          onPress={() => navigation.navigate('Profile Screen')}
+          onPress={() => navigation.navigate('Profile')}
           style={styles.nextButton}
           accessibilityRole='button'
         >
