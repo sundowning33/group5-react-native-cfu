@@ -17,22 +17,22 @@ import SettingsScreen from './screens/SettingsScreen'
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function StartStack() {
-  return (
-    <Stack.Navigator initialRouteName='Login'>
-      <Stack.Screen name='Create Profile' component={CreateProfile} options={{ headerShown: false }} />
-      <Stack.Screen name='Login' component={LoginScreen} options={{ headerShown: false }} />
-      <Stack.Screen name='Create Group' component={CreateGroup} options={{ headerShown: false }} />
-    </Stack.Navigator>
-  )
-}
-
 function MainTabs() {
   return (
     <Stack.Navigator initialRouteName='Explore'>
       <Stack.Screen name='Profile' component={ProfileScreen} />
       <Stack.Screen name='Explore' component={ExploreScreen} />
       <Stack.Screen name='Settings' component={SettingsScreen} />
+    </Stack.Navigator>
+  )
+}
+
+function StartStack() {
+  return (
+    <Stack.Navigator initialRouteName='Login'>
+      <Stack.Screen name='Create Profile' component={CreateProfile} options={{ headerShown: false }} />
+      <Stack.Screen name='Login' component={LoginScreen} options={{ headerShown: false }} />
+      <Stack.Screen name='Create Group' component={CreateGroup} options={{ headerShown: false }} />
     </Stack.Navigator>
   )
 }
