@@ -78,6 +78,13 @@ export const styles = StyleSheet.create({
 
 
   settingsBlock:{
-
+    flexDirection: "row",
+    // alignItems: "center",
+    // alignContent: "center",
+    marginHorizontal: 10,
+  },
+  switch:{
+    marginVertical: 10,
+    marginHorizontal: 5,
   },
 })
