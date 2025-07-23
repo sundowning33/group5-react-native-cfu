@@ -23,10 +23,12 @@ export default function CreateProfile() {
     const navigation = useNavigation()
 
     const [login, setLogin] = useState('')
-    // const bgimg = './assets/loginbg.jpg'
-
     const [password, setPassword] = useState('')
     const [accessCode, setAccessCode] = useState('')
+
+    let passwordToProfile = ""
+    let loginToProfile = ""
+    let accessCodeToProfile = ""
 
     return (
         // i am gonna add documentation later so feel free to add comments
@@ -80,7 +82,7 @@ export default function CreateProfile() {
                 </View>
 
                 <Pressable
-                    onPress={() => navigation.navigate('Profile')}
+                    onPress={() => navigation.navigate('Profile', { passwordToProfile: setPassword, loginToProfile: setLogin, accessCodeToProfile: setAccessCode})}
                     style={styles.nextButton}
                     accessibilityRole='button'
                 >

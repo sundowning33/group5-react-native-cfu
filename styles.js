@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-const mainFontFam = 'Noto Serif' // i will change it later
+const mainFontFam = 'Noto Sans' // i will change it later
 
 export const styles = StyleSheet.create({
   background: {
@@ -71,5 +71,13 @@ export const styles = StyleSheet.create({
     padding: 5,
     marginLeft:20,
     
+  },
+
+
+
+
+
+  settingsBlock:{
+
   },
 })
