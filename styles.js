@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     height: '100%'
   },
   header: {
-    marginTop: 30, 
+    marginTop: 30,
     // alignItems: 'center',
     // alignContent: 'center',
     justifyContent: 'center',
@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
     margin: 8
   },
   basicText: {
-    marginTop: 10, 
+    marginTop: 10,
     justifyContent: 'center',
     fontSize: 16,
     marginHorizontal: 10,
@@ -55,8 +55,7 @@ export const styles = StyleSheet.create({
     marginVertical: 5,
     marginHorizontal: 10,
     marginLeft: "80%",
-    backgroundColor: '#C63B62',
-    height: 30,
+    backgroundColor: '#5A3353',
     width: "15%",
   },
   buttonText: {
@@ -69,22 +68,16 @@ export const styles = StyleSheet.create({
   linkText: {
     color: "blue",
     padding: 5,
-    marginLeft:20,
-    
+    marginLeft: 20,
+
   },
-  settingsBlock:{
-    // flexDirection: "row",
-    // alignItems: "center",
-    // alignContent: "center",
-    marginHorizontal: 10,
-  },
-  switch:{
+  switch: {
     marginVertical: 10,
-    marginHorizontal: 5,    
+    marginHorizontal: 5,
   },
-  
+
   //Stelmakh: putting the explore page styles separately for now, can be combined with the rest on a later date
-  
+
   exploreView: {
     margin: 20,
     // display: flex,
@@ -96,28 +89,68 @@ export const styles = StyleSheet.create({
     height: 100,
     margin: 20,
   },
-  profileImgView:{
+  profileImgView: {
     // display: flex,
     margin: 10,
     flex: 1,
   },
-  profileTextBox:{
+  profileTextBox: {
     // display: flex,
     flexDirection: 'column',
     flex: 2,
   },
-  usernameText:{
+  usernameText: {
     // display: flex,
-    flex:1,
+    flex: 1,
     margin: 5,
     color: 'black',
     fontFamily: mainFontFam,
   },
-  hashtagsText:{
+  hashtagsText: {
     // display: flex,
-    flex:1,
+    flex: 1,
     margin: 5,
     color: 'gray',
     fontFamily: mainFontFam,
+  },
+
+  // settings screen styles
+  settingsBlock: {
+    flexDirection: "row",
+    alignItems: "center",
+    alignContent: "center",
+    marginHorizontal: 30,
+  },
+
+  settingsText: {
+    marginVertical: 5,
+    marginHorizontal: 10,
+    justifyContent: 'center',
+    fontSize: 18,
+    fontFamily: mainFontFam,
+    color: "black",
+  },
+  collapsedContent: {
+    marginVertical: 5,
+    justifyContent: 'center',
+    fontSize: 16,
+    marginLeft: 65,
+    marginRight: 40,
+
+    fontFamily: mainFontFam,
+    color: "black",
+  },
+  settingsIcon: {
+    fontSize: 20,
+    marginVertical: 10,
+    marginRight: 7,
+
+  },
+  settingsSwitch: {
+    alignItems: "flex-end",
+    flex: 1,
+    // marginVertical: 10,
+    // marginHorizontal: 5,  
+
   },
 })
