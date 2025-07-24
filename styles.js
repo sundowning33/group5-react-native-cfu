@@ -86,41 +86,46 @@ export const styles = StyleSheet.create({
   //Stelmakh: putting the explore page styles separately for now, can be combined with the rest on a later date
 
   exploreView: {
-    margin: 20,
-    // display: flex,
+    flex: 1,
     flexDirection: 'column',
   },
   profileBoxView: {
-    // display: flex,
+    display: 'flex',
+    flex: 1,
     flexDirection: 'row',
-    height: 100,
-    margin: 20,
+    margin: 5,
+    backgroundColor: '#C63B62',
+    height: '100%',
+    padding: 5,
+    
   },
   profileImgView: {
     // display: flex,
     margin: 10,
     flex: 1,
+    height: "100%",
+    width: "10%",
   },
-  profileTextBox: {
-    // display: flex,
+  profileTextBox:{
+    display: 'flex',
     flexDirection: 'column',
     flex: 2,
   },
-  usernameText: {
-    // display: flex,
-    flex: 1,
-    margin: 5,
+  usernameText:{
+    flex:1,
+    margin: 10,
+    fontSize: 20,
     color: textDark,
     fontFamily: mainFontFam,
   },
-  hashtagsText: {
-    // display: flex,
-    flex: 1,
-    margin: 5,
-    color: 'gray',
+  hashtagsText:{
+    flex:1,
+    margin: 10,
+    fontSize: 20,
+    color: 'red',
     fontFamily: mainFontFam,
   },
-
+    
   // settings screen styles
   settingsBlock: {
     flexDirection: "row",
@@ -159,4 +164,5 @@ export const styles = StyleSheet.create({
     alignItems: "flex-end",
     flex: 1,
   },
+  // Stelmakh: I'll make the Profile page too, since Sofia isn't with us anymore
 })
