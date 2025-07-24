@@ -3,7 +3,9 @@ import {
   View,
   TouchableOpacity,
   Switch,
-  ImageBackground
+  ImageBackground,
+  // useColorScheme,
+
 } from 'react-native'
 import { useState } from 'react'
 import { styles } from "../styles.js"
@@ -13,12 +15,15 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import { Divider } from 'react-native-paper'
 
 export default function SettingsScreen() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
   const [areNotifsOn, setAreNotifsOn] = useState(false)
-
   const [isCollapsedHelp, setIsCollapsedHelp] = useState(true)
   const [isCollapsedAccount, setIsCollapsedAccount] = useState(true)
   const [isCollapsedContact, setIsCollapsedContact] = useState(true)
+
+  // const colorScheme = useColorScheme()
+  // const [isDarkMode, setIsDarkMode] = useState(colorScheme === 'dark')
+  const [isDarkMode, setIsDarkMode] = useState(false)
+
 
 
   return (
@@ -41,7 +46,7 @@ export default function SettingsScreen() {
           />
         </View>
 
-        <Divider horizontalInset={true} bold={true} style={{ backgroundColor: '#5A3353' }}/>
+        <Divider horizontalInset={true} bold={true} style={{ backgroundColor: '#5A3353' }} />
 
         <View style={[styles.settingsBlock]}>
           <Icon name="notifications-outline" style={styles.settingsIcon} />
@@ -52,8 +57,8 @@ export default function SettingsScreen() {
             style={[styles.settingsSwitch]}
           />
         </View>
-        
-         <Divider horizontalInset={true} bold={true} style={{ backgroundColor: '#5A3353' }}/>
+
+        <Divider horizontalInset={true} bold={true} style={{ backgroundColor: '#5A3353' }} />
 
         <View>
           <TouchableOpacity onPress={() => setIsCollapsedHelp(!isCollapsedHelp)} style={styles.settingsBlock}>
@@ -66,7 +71,7 @@ export default function SettingsScreen() {
           </Collapsible>
         </View>
 
-         <Divider horizontalInset={true} bold={true} style={{ backgroundColor: '#5A3353' }}/>
+        <Divider horizontalInset={true} bold={true} style={{ backgroundColor: '#5A3353' }} />
 
         <TouchableOpacity onPress={() => setIsCollapsedAccount(!isCollapsedAccount)} style={styles.settingsBlock}>
           <Icon name="rocket-outline" size={20} style={styles.settingsIcon} />
@@ -77,7 +82,7 @@ export default function SettingsScreen() {
           <Text style={styles.collapsedContent}>Log out, change password, etc</Text>
         </Collapsible>
 
-         <Divider horizontalInset={true} bold={true} style={{ backgroundColor: '#5A3353' }}/>
+        <Divider horizontalInset={true} bold={true} style={{ backgroundColor: '#5A3353' }} />
 
         <TouchableOpacity onPress={() => setIsCollapsedContact(!isCollapsedContact)} style={styles.settingsBlock}>
           <Icon name="people-outline" style={styles.settingsIcon} />
@@ -90,4 +95,5 @@ export default function SettingsScreen() {
 
     </View>
 
-  )}
+  )
+}

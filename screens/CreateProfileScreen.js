@@ -82,7 +82,7 @@ export default function CreateProfile() {
                 </View>
 
                 <Pressable
-                    onPress={() => navigation.navigate('Profile', { passwordToProfile: setPassword, loginToProfile: setLogin, accessCodeToProfile: setAccessCode})}
+                    onPress={() => navigation.navigate('Tabs', { passwordToProfile: setPassword, loginToProfile: setLogin, accessCodeToProfile: setAccessCode})}
                     style={styles.nextButton}
                     accessibilityRole='button'
                 >

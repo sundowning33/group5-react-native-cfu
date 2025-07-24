@@ -84,7 +84,7 @@ export default function CreateGroup () {
 
         <Pressable
           onPress={() =>
-            navigation.navigate('Profile', {
+            navigation.navigate('Tabs', {
               passwordToProfile: setPassword,
               loginToProfile: setLogin,
               accessCodeToProfile: setAccessCode

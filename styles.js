@@ -1,10 +1,12 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, useColorScheme } from 'react-native'
+import setIsDarkMode from "./screens/SettingsScreen"
 
 const mainFontFam = 'Noto Sans' // i will change it later
-const warmdarkpurplecolor = "#5A3353"
-const textOnDarkBg = "#fff"
-const iconbgcolor = "#BDC0E5" // BFC6E5
-const textDark = "#000000"
+const warmdarkpurplecolor = "#5A3353" // setIsDarkMode ? "purple" : "#5A3353"
+const textOnDarkBg = "#fff" // setIsDarkMode? "#000000" : "#ffffff"
+const iconbgcolor = "#bdc0e5" // setIsDarkMode ? "purple" : "#BDC0E5" // BFC6E5
+const textDark = "#000000"// setIsDarkMode? "#ffffff" : "#000000"
+const iconcolor = "#000000"// setIsDarkMode ? "#ffffff" : "#000000"
 
 export const styles = StyleSheet.create({
   //Stelmakh: Login page, maybe some other pages
@@ -36,12 +38,13 @@ export const styles = StyleSheet.create({
     backgroundColor: warmdarkpurplecolor,
     padding: 5,
     justifyContent: "center",
-    borderRadius: 11,
+    borderRadius: 15,
     marginVertical: 10,
   },
   textInput: {
     padding: 5,
     backgroundColor: textOnDarkBg,
+    color: textDark,
     borderRadius: 8,
     margin: 8
   },
@@ -149,6 +152,7 @@ export const styles = StyleSheet.create({
     marginRight: 7,
     borderRadius: 14,
     padding: 4,
+    color: iconcolor,
     backgroundColor: iconbgcolor,
   },
   settingsSwitch: {
