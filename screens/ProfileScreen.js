@@ -16,11 +16,13 @@ import {
 } from 'react-native'
 import { useState, useEffect } from 'react'
 import { styles } from "../styles.js"
+
 import { useNavigation } from '@react-navigation/native'
 
 
 
 export default function ProfileScreen() {
+    const navigation = useNavigation()
     return (
         <View>
             <Text>Create Profile Screen is here</Text>

@@ -5,18 +5,18 @@ const mainFontFam = 'Noto Sans' // i will change it later
 export const styles = StyleSheet.create({
   //Stelmakh: Login page, maybe some other pages
   background: {
-    flex: 1,
+    // flex: 1,
     height: '100%',
     width: '100%',
     resizeMode: 'cover',
 
   },
   container: {
-    flex: 1,
+    // flex: 1,
     height: '100%'
   },
   header: {
-    marginTop: 30, // it should be a bit lower like in the figma prototype
+    marginTop: 30, 
     // alignItems: 'center',
     // alignContent: 'center',
     justifyContent: 'center',
@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
     margin: 8
   },
   basicText: {
-    marginTop: 10, // it should be a bit lower like in the figma prototype
+    marginTop: 10, 
     justifyContent: 'center',
     fontSize: 16,
     marginHorizontal: 10,
@@ -58,7 +58,6 @@ export const styles = StyleSheet.create({
     backgroundColor: '#C63B62',
     height: 30,
     width: "15%",
-
   },
   buttonText: {
     justifyContent: 'center',
@@ -74,45 +73,48 @@ export const styles = StyleSheet.create({
     
   },
   settingsBlock:{
-    
+    // flexDirection: "row",
+    // alignItems: "center",
+    // alignContent: "center",
+    marginHorizontal: 10,
+  },
+  switch:{
+    marginVertical: 10,
+    marginHorizontal: 5,    
   },
   
   //Stelmakh: putting the explore page styles separately for now, can be combined with the rest on a later date
   
   exploreView: {
     margin: 20,
-    display: flex,
+    // display: flex,
     flexDirection: 'column',
-
   },
   profileBoxView: {
-    display: flex,
+    // display: flex,
     flexDirection: 'row',
     height: 100,
     margin: 20,
-
   },
   profileImgView:{
-    display: flex,
+    // display: flex,
     margin: 10,
     flex: 1,
-
   },
   profileTextBox:{
-    display: flex,
+    // display: flex,
     flexDirection: 'column',
     flex: 2,
-
   },
   usernameText:{
-    display: flex,
+    // display: flex,
     flex:1,
     margin: 5,
     color: 'black',
     fontFamily: mainFontFam,
   },
   hashtagsText:{
-    display: flex,
+    // display: flex,
     flex:1,
     margin: 5,
     color: 'gray',
