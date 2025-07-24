@@ -123,4 +123,7 @@ export const styles = StyleSheet.create({
     color: 'red',
     fontFamily: mainFontFam,
   },
+
+  // Stelmakh: I'll make the Profile page too, since Sofia isn't with us anymore
+  
 })
