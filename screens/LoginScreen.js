@@ -90,7 +90,7 @@ export default function LoginScreen() {
         </Pressable>
 
         <TouchableOpacity
-          onPress={() => navigation.navigate('Create Profile')}
+          onPress={() => navigation.navigate('Create Account')}
           accessibilityRole='link'
         >
           <Text style={styles.linkText}>Create an account instead</Text>

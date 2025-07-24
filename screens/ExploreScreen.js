@@ -17,25 +17,33 @@ import {
   import { useState, useEffect } from 'react'
   import {styles} from "../styles.js"
 
-function ProfileBlock(placeholderImg, placeholderUsername, placeholderHashtags){
+function ProfileBlock(){
     return(
         <View style={styles.profileBoxView}>
-            <Image style={styles.profileImgView} source={require={placeholderImg}}/>
+            <Image style={styles.profileImgView} source={require('../assets/adaptive-icon.png')}/>
             <View style={styles.profileTextBox}>
-                <Text style={styles.usernameText}>{placeholderUsername}</Text>
-                <Text style={styles.usernameText}>{placeholderHashtags}</Text>
+                <Text style={styles.usernameText}>sundowning</Text>
+                <Text style={styles.usernameText}>#music</Text>
             </View>
         </View>
     );
 }
 
 export default function ExploreScreen () {
-    const placeholderImg='./assets/favicon.png'
-    const placeholderUsername='sundowning'
-    const placeholderHashtags='#music'
+    // const placeholderImg=require('../assets/adaptive-icon.png')
+    // const placeholderUsername='sundowning'
+    // const placeholderHashtags='#music'
     return (
-        <View style={styles.exploreView}>
+        <ScrollView style={styles.exploreView}>
             <ProfileBlock/>
-        </View>
+            <ProfileBlock/>
+            <ProfileBlock/>
+            <ProfileBlock/>
+            <ProfileBlock/>
+            <ProfileBlock/>
+            <ProfileBlock/>
+            <ProfileBlock/>
+            <ProfileBlock/>
+        </ScrollView>
     );
 }
