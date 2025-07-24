@@ -1,99 +1,99 @@
 import {
   Text,
-  ScrollView,
-  Image,
   View,
-  Button,
-  Pressable,
   TouchableOpacity,
-  Alert,
   Switch,
-  TextInput,
-  SafeAreaView,
-  KeyboardAvoidingView,
-  FlatList,
   ImageBackground,
-  Animated
+  // useColorScheme,
+
 } from 'react-native'
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import { styles } from "../styles.js"
 
-import { Collapsible } from 'react-native-collapsible'
-import { Icon } from 'react-native-vector-icons/Ionicons'
+import Collapsible from 'react-native-collapsible'
+import Icon from 'react-native-vector-icons/Ionicons'
+import { Divider } from 'react-native-paper'
 
 export default function SettingsScreen() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
   const [areNotifsOn, setAreNotifsOn] = useState(false)
-  const [isCollapsed, setIsCollapsed] = useState(true)
+  const [isCollapsedHelp, setIsCollapsedHelp] = useState(true)
+  const [isCollapsedAccount, setIsCollapsedAccount] = useState(true)
+  const [isCollapsedContact, setIsCollapsedContact] = useState(true)
+
+  // const colorScheme = useColorScheme()
+  // const [isDarkMode, setIsDarkMode] = useState(colorScheme === 'dark')
+  const [isDarkMode, setIsDarkMode] = useState(false)
+
+
 
   return (
     <View>
-      <Text></Text>
-      {/* <Text style={styles.header} accessibilityRole='header'>Settings</Text>
-      <View style={[styles.settingsBlock]}>
-        <Icon name="light-up" />
-        <Text style={[styles.basicText, fontSize = "14"]}>Switch between Dark and Light modes for accessibility</Text>
-        <Switch
-          value={isDarkMode}
-          onChange={() => setIsDarkMode(!isDarkMode)}
-          style={[styles.switch]}
-        />
-      </View> */}
+      <ImageBackground // img bg should be like the view component and encompass the components inside it
+        source={require('../assets/bg5.jpg')}
+        opacity={0.3}
+        style={[styles.background]}
+        alt="A pretty low saturated image of marble with abstract streaks of burgundy and purple and golden highlights across the center."
+      >
+        <Text style={styles.header} accessibilityRole='header'>Settings</Text>
 
-      {/* <View style={[styles.settingsBlock]}>
-        <Icon name="notifications-outline" />
-        <Text style={[styles.basicText, fontSize = "14"]}>Silent, sound, push notifs</Text>
-        <Switch
-          value={areNotifsOn}
-          onChange={() => setAreNotifsOn(!areNotifsOn)}
-          style={[styles.switch]}
-        />
-      </View> */}
+        <View style={[styles.settingsBlock]}>
+          <Icon name="bulb-outline" style={styles.settingsIcon} />
+          <Text style={[styles.settingsText]}>Dark Mode</Text>
+          <Switch
+            value={isDarkMode}
+            onValueChange={() => setIsDarkMode(!isDarkMode)}
+            style={[styles.settingsSwitch]}
+          />
+        </View>
 
-      {/* <View>
-        <TouchableOpacity onPress={() => setIsCollapsed(!isCollapsed)} style={styles.settingsBlock}>
-          <Icon name="help-circle-outline" size={20} />
-          <Text style={[styles.basicText, { fontSize: 14 }]}>Help & FAQ</Text>
+        <Divider horizontalInset={true} bold={true} style={{ backgroundColor: '#5A3353' }} />
+
+        <View style={[styles.settingsBlock]}>
+          <Icon name="notifications-outline" style={styles.settingsIcon} />
+          <Text style={[styles.settingsText]}>Notifications [in dev]</Text>
+          <Switch
+            value={areNotifsOn}
+            onValueChange={() => setAreNotifsOn(!areNotifsOn)}
+            style={[styles.settingsSwitch]}
+          />
+        </View>
+
+        <Divider horizontalInset={true} bold={true} style={{ backgroundColor: '#5A3353' }} />
+
+        <View>
+          <TouchableOpacity onPress={() => setIsCollapsedHelp(!isCollapsedHelp)} style={styles.settingsBlock}>
+            <Icon name="help-circle-outline" style={styles.settingsIcon} />
+            <Text style={[styles.settingsText]}>Help & FAQ</Text>
+          </TouchableOpacity>
+
+          <Collapsible collapsed={isCollapsedHelp}>
+            <Text style={styles.collapsedContent}>Documentation, common issues...</Text>
+          </Collapsible>
+        </View>
+
+        <Divider horizontalInset={true} bold={true} style={{ backgroundColor: '#5A3353' }} />
+
+        <TouchableOpacity onPress={() => setIsCollapsedAccount(!isCollapsedAccount)} style={styles.settingsBlock}>
+          <Icon name="rocket-outline" size={20} style={styles.settingsIcon} />
+          <Text style={[styles.settingsText]}>Account details</Text>
         </TouchableOpacity>
 
-        <Collapsible collapsed={isCollapsed}>
-          <View style={styles.innerContent}>
-            <Text>Documentation, common issues...</Text>
-          </View>
+        <Collapsible collapsed={isCollapsedAccount}>
+          <Text style={styles.collapsedContent}>Log out, change password, etc</Text>
         </Collapsible>
-      </View> */}
-      {/* <View>
-        <TouchableOpacity onPress={() => setIsCollapsed(!isCollapsed)} style={styles.settingsBlock}>
-          <Icon name="logout" size={20} />
-          <Text style={[styles.basicText, { fontSize: 14 }]}>Account details</Text>
-        </TouchableOpacity>
 
-        <Collapsible collapsed={isCollapsed}>
-          <View style={styles.innerContent}>
-            <Text>Log out, change password, etc</Text>
-          </View>
+        <Divider horizontalInset={true} bold={true} style={{ backgroundColor: '#5A3353' }} />
+
+        <TouchableOpacity onPress={() => setIsCollapsedContact(!isCollapsedContact)} style={styles.settingsBlock}>
+          <Icon name="people-outline" style={styles.settingsIcon} />
+          <Text style={[styles.settingsText]}>Contact us</Text> </TouchableOpacity>
+
+        <Collapsible collapsed={isCollapsedContact}>
+          <Text style={styles.collapsedContent}>Mariia Semerei: mariiasemerei@gmail.com or sundowning33 on GitHub, Sofiia Kaiuk, Sofia Krasovska, Anna Stelmakh</Text>
         </Collapsible>
-      </View> */}
-
-      {/* <View>
-        <TouchableOpacity onPress={() => setIsCollapsed(!isCollapsed)} style={styles.settingsBlock}>
-          <Icon name="mail" size={20} />
-          <Text style={[styles.basicText, { fontSize: 14 }]}>Contact Us & About</Text>
-        </TouchableOpacity>
-
-        <Collapsible collapsed={isCollapsed}>
-          <View style={styles.innerContent}>
-            <Text>Who are the devs of this app?
-              Mariia Semerei (sundowning33 on GitHub or mariiasemerei@gmail.com),
-              Sofiia Kaiuk,
-              Sofia Krasovska,
-              Anna Stelmakh
-            </Text>
-          </View>
-        </Collapsible>
-      </View> */}
-
+      </ImageBackground>
 
     </View>
-  );
+
+  )
 }

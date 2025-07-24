@@ -45,15 +45,15 @@ function MainTabs() {
   );
 }
 
-export default function App() {
+export default function App() {        
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login" >
-        <Stack.Screen name="Login" component={LoginScreen}  />
-        <Stack.Screen name="Create Group" component={CreateGroup}  />
-        <Stack.Screen name="Create Account" component={CreateProfile}  />
-        <Stack.Screen name="Tabs" component={MainTabs}/>
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+        <NavigationContainer>
+          <Stack.Navigator initialRouteName="Login" >
+            <Stack.Screen name="Login" component={LoginScreen} />
+            <Stack.Screen name="Create Group" component={CreateGroup} />
+            <Stack.Screen name="Create Account" component={CreateProfile} />
+            <Stack.Screen name="Tabs" component={MainTabs} />
+          </Stack.Navigator>
+        </NavigationContainer>
+        );
 }

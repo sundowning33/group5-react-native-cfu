@@ -97,7 +97,7 @@ export default function LoginScreen() {
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={() => navigation.navigate('Tabs')}
+          onPress={() => navigation.navigate('Create Group')}
           accessibilityRole='link'
         >
           <Text style={styles.linkText}>Create a group instead</Text>
