@@ -46,13 +46,13 @@ function SettingsStack() {
   )
 }
 
-function SettingsStack() {
-  return (
-    <Tab.Navigator initialRouteName='Profile'>
-      <Tab.Screen name='Settings' component={SettingsScreen} />
-    </Tab.Navigator>
-  )
-}
+// function SettingsStack() {
+//   return (
+//     <Tab.Navigator initialRouteName='Profile'>
+//       <Tab.Screen name='Settings' component={SettingsScreen} />
+//     </Tab.Navigator>
+//   )
+// }
 
 export default function App() {
   return (
