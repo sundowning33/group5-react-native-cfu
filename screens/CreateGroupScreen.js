@@ -18,7 +18,7 @@ import { useState, useEffect } from 'react'
 import { styles } from '../styles.js'
 import { useNavigation } from '@react-navigation/native'
 
-export default function CreateProfile () {
+export default function CreateGroup () {
   const navigation = useNavigation()
 
   const [login, setLogin] = useState('')
@@ -104,7 +104,7 @@ export default function CreateProfile () {
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={() => navigation.navigate('Create Profile')}
+          onPress={() => navigation.navigate('Create Account')}
           accessibilityRole='link'
         >
           <Text style={styles.linkText}>Create an account instead</Text>

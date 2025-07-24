@@ -1,6 +1,10 @@
 import { StyleSheet } from 'react-native'
 
 const mainFontFam = 'Noto Sans' // i will change it later
+const warmdarkpurplecolor = "#5A3353"
+const textOnDarkBg = "#fff"
+const iconbgcolor = "#BDC0E5" // BFC6E5
+const textDark = "#000000"
 
 export const styles = StyleSheet.create({
   //Stelmakh: Login page, maybe some other pages
@@ -23,13 +27,13 @@ export const styles = StyleSheet.create({
     fontSize: 25,
     fontFamily: mainFontFam,
     textShadowRadius: 2,
-    textShadowColor: 'black',
+    textShadowColor: textDark,
     textShadowOffset: { width: 1, height: 1 },
     textAlign: 'center'
   },
   textInputContainer: {
     marginHorizontal: 20,
-    backgroundColor: "#5A3353",
+    backgroundColor: warmdarkpurplecolor,
     padding: 5,
     justifyContent: "center",
     borderRadius: 11,
@@ -37,7 +41,7 @@ export const styles = StyleSheet.create({
   },
   textInput: {
     padding: 5,
-    backgroundColor: "white",
+    backgroundColor: textOnDarkBg,
     borderRadius: 8,
     margin: 8
   },
@@ -47,7 +51,7 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     marginHorizontal: 10,
     fontFamily: mainFontFam,
-    color: "white",
+    color: textOnDarkBg,
   },
   nextButton: {
     borderRadius: 10,
@@ -55,14 +59,14 @@ export const styles = StyleSheet.create({
     marginVertical: 5,
     marginHorizontal: 10,
     marginLeft: "80%",
-    backgroundColor: '#5A3353',
+    backgroundColor: warmdarkpurplecolor,
     width: "15%",
   },
   buttonText: {
     justifyContent: 'center',
     fontSize: 16,
     fontFamily: mainFontFam,
-    color: "white",
+    color: textOnDarkBg,
     textAlign: "center",
   },
   linkText: {
@@ -103,7 +107,7 @@ export const styles = StyleSheet.create({
     // display: flex,
     flex: 1,
     margin: 5,
-    color: 'black',
+    color: textDark,
     fontFamily: mainFontFam,
   },
   hashtagsText: {
@@ -128,29 +132,27 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     fontSize: 18,
     fontFamily: mainFontFam,
-    color: "black",
+    color: textDark,
   },
   collapsedContent: {
     marginVertical: 5,
     justifyContent: 'center',
     fontSize: 16,
-    marginLeft: 65,
+    marginLeft: 75,
     marginRight: 40,
-
     fontFamily: mainFontFam,
-    color: "black",
+    color: textDark,
   },
   settingsIcon: {
     fontSize: 20,
-    marginVertical: 10,
+    marginVertical: 8,
     marginRight: 7,
-
+    borderRadius: 14,
+    padding: 4,
+    backgroundColor: iconbgcolor,
   },
   settingsSwitch: {
     alignItems: "flex-end",
     flex: 1,
-    // marginVertical: 10,
-    // marginHorizontal: 5,  
-
   },
 })

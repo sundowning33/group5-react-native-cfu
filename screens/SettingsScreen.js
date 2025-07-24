@@ -45,7 +45,7 @@ export default function SettingsScreen() {
 
         <View style={[styles.settingsBlock]}>
           <Icon name="notifications-outline" style={styles.settingsIcon} />
-          <Text style={[styles.settingsText]}>Notifications</Text>
+          <Text style={[styles.settingsText]}>Notifications [in dev]</Text>
           <Switch
             value={areNotifsOn}
             onValueChange={() => setAreNotifsOn(!areNotifsOn)}
@@ -74,7 +74,7 @@ export default function SettingsScreen() {
         </TouchableOpacity>
 
         <Collapsible collapsed={isCollapsedAccount}>
-          <Text style={styles.collapsedContent}> Log out, change password, etc</Text>
+          <Text style={styles.collapsedContent}>Log out, change password, etc</Text>
         </Collapsible>
 
          <Divider horizontalInset={true} bold={true} style={{ backgroundColor: '#5A3353' }}/>
@@ -84,11 +84,10 @@ export default function SettingsScreen() {
           <Text style={[styles.settingsText]}>Contact us</Text> </TouchableOpacity>
 
         <Collapsible collapsed={isCollapsedContact}>
-          <Text style={styles.collapsedContent}>Mariia Semerei, Sofiia Kaiuk, Sofia Krasovska, Anna Stelmakh</Text>
+          <Text style={styles.collapsedContent}>Mariia Semerei: mariiasemerei@gmail.com or sundowning33 on GitHub, Sofiia Kaiuk, Sofia Krasovska, Anna Stelmakh</Text>
         </Collapsible>
       </ImageBackground>
 
     </View>
 
-  );
-}
+  )}
