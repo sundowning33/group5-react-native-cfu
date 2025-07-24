@@ -41,7 +41,7 @@ export default function LoginScreen() {
     >
       <KeyboardAvoidingView style={styles.container}>
         <Text accessibilityRole='header' style={styles.header}>
-          Log In
+          Log in
         </Text>
 
         <View style={[styles.textInputContainer]}>
@@ -82,7 +82,7 @@ export default function LoginScreen() {
         </View>
 
         <Pressable
-          onPress={() => navigation.navigate('Profile', { passwordToProfile: setPassword, loginToProfile: setLogin, accessCodeToProfile: setAccessCode })}
+          onPress={() => navigation.navigate('Tabs', { passwordToProfile: setPassword, loginToProfile: setLogin, accessCodeToProfile: setAccessCode })}
           style={styles.nextButton}
           accessibilityRole='button'
         >
@@ -93,14 +93,14 @@ export default function LoginScreen() {
           onPress={() => navigation.navigate('Create Profile')}
           accessibilityRole='link'
         >
-          <Text style={styles.linkText}>Create Account instead</Text>
+          <Text style={styles.linkText}>Create an account instead</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={() => navigation.navigate('Create Group')}
+          onPress={() => navigation.navigate('Tabs')}
           accessibilityRole='link'
         >
-          <Text style={styles.linkText}>Create Group instead</Text>
+          <Text style={styles.linkText}>Create a group instead</Text>
         </TouchableOpacity>
       </KeyboardAvoidingView>
     </ImageBackground>

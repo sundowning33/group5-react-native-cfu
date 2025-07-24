@@ -4,7 +4,7 @@
     "slug": "group5-react-native-cfu",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/bg5.jpg",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
