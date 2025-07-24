@@ -17,15 +17,12 @@ import ExploreScreen from './screens/ExploreScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import SettingsScreen from './screens/SettingsScreen'
 
-// import {styles} from "styles.js"
-
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
 
 function MainTabs() {
   return (
     <Tabs.Navigator screenOptions={{
-      // headerShown: false,
       tabBarActiveTintColor: '#C63B62',
       tabBarInactiveTintColor: '#5A3353',
     }}>
@@ -60,3 +57,18 @@ export default function App() {
         </NavigationContainer>
         );
 }
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login" >
+        <Stack.Screen name="Login" component={LoginScreen}  />
+        <Stack.Screen name="Create Group" component={CreateGroup}  />
+        <Stack.Screen name="Create Account" component={CreateProfile}  />
+          
+ 
+        <Stack.Screen name="Tabs" component={MainTabs}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+ }
