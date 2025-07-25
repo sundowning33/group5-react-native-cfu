@@ -93,10 +93,10 @@ export default function SettingsScreen() {
             Mariia Semerei: mariiasemerei@gmail.com OR sundowning33 on GitHub
           </Text>
           <Text style={styles.collapsedContent}>
-            Sofiia Kaiuk
+            Sofiia Kaiuk:
           </Text>
           <Text style={styles.collapsedContent}>
-            Sofia Krasovska
+            Sofia Krasovska:
           </Text>
           <Text style={styles.collapsedContent}>
             Anna Stelmakh: nimthecloud05@gmail.com OR CloudyCat05 on GitHub

@@ -9,7 +9,7 @@ const textDark = "#000000"// setIsDarkMode? "#ffffff" : "#000000"
 const iconcolor = "#000000"// setIsDarkMode ? "#ffffff" : "#000000"
 
 export const styles = StyleSheet.create({
-  //Stelmakh: Login page, maybe some other pages
+  //Login, sign in, create group page
   background: {
     // flex: 1,
     height: '100%',
@@ -83,7 +83,7 @@ export const styles = StyleSheet.create({
     marginHorizontal: 5,
   },
 
-  //Stelmakh: putting the explore page styles separately for now, can be combined with the rest on a later date
+  //Stelmakh: explore page styles explore page styles 
 
   exploreView: {
     flex: 1,
@@ -94,13 +94,15 @@ export const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     margin: 5,
-    backgroundColor: '#C63B62',
+    backgroundColor: warmdarkpurplecolor,
     height: '100%',
     padding: 5,
+    borderRadius: 20,
     
   },
   profileImgView: {
     // display: flex,
+    borderRadius: 55,
     margin: 10,
     // flex: 1,
     height: 80,
@@ -115,19 +117,36 @@ export const styles = StyleSheet.create({
     flex:1,
     margin: 10,
     marginBottom: 5,
-    fontSize: 20,
+    fontSize: 25,
     color: textDark,
     fontFamily: mainFontFam,
   },
   hashtagsText:{
     flex:2,
     margin: 5,
-    fontSize: 15,
+    fontSize: 20,
     opacity: 0.4,
     fontFamily: mainFontFam,
   },
+  searchBarLine:{
+    backgroundColor:warmdarkpurplecolor,
+    height:50,
+    padding:5,
+  },
+  searchBarField:{
+    backgroundColor:'#8a5a7fff',
+    flex:1,
+    // padding: 3,
+    borderRadius: 50,
+  },
+  searchBarText:{
+    fontFamily: mainFontFam,
+    fontSize: 15,
+    color:'black',
+  },
+
     
-  // settings screen styles
+  // settings screen styles settings screen styles
   settingsBlock: {
     flexDirection: "row",
     alignItems: "center",
@@ -164,43 +183,5 @@ export const styles = StyleSheet.create({
   settingsSwitch: {
     alignItems: "flex-end",
     flex: 1,
-  },
-  // Stelmakh: styles for my version of the profile page
-  coloredBgBlock:{
-    height:100,
-    backgroundColor: "#C63B62",
-    alignItems:'center',
-  },
-  myProfileImage:{
-    marginTop:35,
-    padding:5,
-    height: 100,
-    width: 100,
-  },
-  profileUsername:{
-    display:'flex',
-    height: 25,
-    padding:3,
-    justifyContent:'center',
-  },
-  infoView:{
-    display: 'flex',
-    padding: 5,
-    margin: 5,
-    borderColor: 'pink',
-  },
-  infoBlock:{
-    display:'flex',
-    padding:10,
-    justifyContent:'flex-start',
-
-    // flexWrap:'wrap',
-
-  },
-  infoText:{
-    fontFamily: mainFontFam,
-    fontSize: 20,
-    color: textDark,
-    flexWrap:'wrap',
   },
 })
