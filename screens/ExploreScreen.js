@@ -23,7 +23,7 @@ function ProfileBlock(){
             <Image style={styles.profileImgView} source={require('../assets/adaptive-icon.png')}/>
             <View style={styles.profileTextBox}>
                 <Text style={styles.usernameText}>sundowning</Text>
-                <Text style={styles.usernameText}>#music</Text>
+                <Text style={styles.hashtagsText}>#music</Text>
             </View>
         </View>
     );
@@ -34,16 +34,18 @@ export default function ExploreScreen () {
     // const placeholderUsername='sundowning'
     // const placeholderHashtags='#music'
     return (
-        <ScrollView style={styles.exploreView}>
-            <ProfileBlock/>
-            <ProfileBlock/>
-            <ProfileBlock/>
-            <ProfileBlock/>
-            <ProfileBlock/>
-            <ProfileBlock/>
-            <ProfileBlock/>
-            <ProfileBlock/>
-            <ProfileBlock/>
-        </ScrollView>
+        <ImageBackground source={require('../assets/bg6.jpg')} style={styles.container}>
+            <ScrollView style={styles.exploreView}>
+                <ProfileBlock/>
+                <ProfileBlock/>
+                <ProfileBlock/>
+                <ProfileBlock/>
+                <ProfileBlock/>
+                <ProfileBlock/>
+                <ProfileBlock/>
+                <ProfileBlock/>
+                <ProfileBlock/>
+            </ScrollView>
+        </ImageBackground>
     );
 }

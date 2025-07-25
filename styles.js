@@ -102,9 +102,9 @@ export const styles = StyleSheet.create({
   profileImgView: {
     // display: flex,
     margin: 10,
-    flex: 1,
-    height: "100%",
-    width: "10%",
+    // flex: 1,
+    height: 80,
+    width: 80,
   },
   profileTextBox:{
     display: 'flex',
@@ -114,15 +114,16 @@ export const styles = StyleSheet.create({
   usernameText:{
     flex:1,
     margin: 10,
+    marginBottom: 5,
     fontSize: 20,
     color: textDark,
     fontFamily: mainFontFam,
   },
   hashtagsText:{
-    flex:1,
-    margin: 10,
-    fontSize: 20,
-    color: 'red',
+    flex:2,
+    margin: 5,
+    fontSize: 15,
+    opacity: 0.4,
     fontFamily: mainFontFam,
   },
     
@@ -164,5 +165,42 @@ export const styles = StyleSheet.create({
     alignItems: "flex-end",
     flex: 1,
   },
-  // Stelmakh: I'll make the Profile page too, since Sofia isn't with us anymore
+  // Stelmakh: styles for my version of the profile page
+  coloredBgBlock:{
+    height:100,
+    backgroundColor: "#C63B62",
+    alignItems:'center',
+  },
+  myProfileImage:{
+    marginTop:35,
+    padding:5,
+    height: 100,
+    width: 100,
+  },
+  profileUsername:{
+    display:'flex',
+    height: 25,
+    padding:3,
+    justifyContent:'center',
+  },
+  infoView:{
+    display: 'flex',
+    padding: 5,
+    margin: 5,
+    borderColor: 'pink',
+  },
+  infoBlock:{
+    display:'flex',
+    padding:10,
+    justifyContent:'flex-start',
+
+    // flexWrap:'wrap',
+
+  },
+  infoText:{
+    fontFamily: mainFontFam,
+    fontSize: 20,
+    color: textDark,
+    flexWrap:'wrap',
+  },
 })

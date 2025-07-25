@@ -26,15 +26,16 @@ function MainTabs() {
       tabBarActiveTintColor: '#C63B62',
       tabBarInactiveTintColor: '#5A3353',
     }}>
-      <Tabs.Screen name="Explore" component={ExploreScreen} options={{
-        tabBarIcon: ({ color }) => {
-          return <Ionicons name='home' size={20} color={color} />;
-        }
-      }} />
+    
       <Tabs.Screen name="Profile" component={ProfileScreen} options={{
         tabBarIcon: ({ color }) => {
           return <Ionicons name='person' size={20} color={color} />;
-        }
+        }, headerShown: false
+      }} />
+      <Tabs.Screen name="Explore" component={ExploreScreen} options={{
+        tabBarIcon: ({ color }) => {
+          return <Ionicons name='home' size={20} color={color} />;
+        }, headerShown: false
       }} />
       <Tabs.Screen name="Settings" component={SettingsScreen} options={{
         tabBarIcon: ({ color }) => {
