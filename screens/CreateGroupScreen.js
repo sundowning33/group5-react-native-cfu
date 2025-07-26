@@ -34,12 +34,12 @@ export default function CreateGroup () {
     // <ScrollView style={styles.container}>
     <ImageBackground 
       source={require('../assets/bg5.jpg')}
-      opacity={0.5}
+      opacity={0.2}
       style={[styles.background]}
       alt=''
     >
       <KeyboardAvoidingView style={styles.container}>
-        <Text accessibilityRole='header' style={[styles.header, {color: "white"}]}>
+        <Text accessibilityRole='header' style={[styles.header]}>
           Create a group
         </Text>
 

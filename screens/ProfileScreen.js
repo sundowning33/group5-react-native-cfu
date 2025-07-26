@@ -28,7 +28,7 @@ export default function ProfileScreen() {
   const [fullname, setFullName] = useState('');
   const [birthday, setBirthday] = useState('');
 
-  const audioSource = require('../assets/unforgiven2.mp3');
+  const audioSource = require('../assets/song.mp3');
   const player = useAudioPlayer(audioSource);
 
   const [image, setImage] = useState(null);

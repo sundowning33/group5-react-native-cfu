@@ -31,12 +31,12 @@ function MainTabs() {
       <Tabs.Screen name="Explore" component={ExploreScreen} options={{
         tabBarIcon: ({ color }) => {
           return <AntDesign name='home' size={20} color={color} />;
-        }
+        }, headerShown: false
       }} />
       <Tabs.Screen name="Profile" component={ProfileScreen} options={{
         tabBarIcon: ({ color }) => {
           return <AntDesign name='user' size={20} color={color} />;
-        }
+        }, headerShown: false
       }} />
       <Tabs.Screen name="Settings" component={SettingsScreen} options={{
         tabBarIcon: ({ color }) => {

@@ -34,12 +34,12 @@ export default function LoginScreen() {
     // <ScrollView style={styles.container}>
     <ImageBackground // img bg should be like the view component and encompass the components inside it
       source={require('../assets/bg5.jpg')}
-      opacity={0.5}
+      opacity={0.2}
       style={styles.background}
       alt=''
     >
       <KeyboardAvoidingView style={styles.container}>
-        <Text accessibilityRole='header' style={[styles.header, { color: "white" }]}>
+        <Text accessibilityRole='header' style={[styles.header]}>
           Log in
         </Text>
 
