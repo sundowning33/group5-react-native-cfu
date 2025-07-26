@@ -18,6 +18,7 @@ import { useState, useEffect } from 'react'
 import { styles } from '../styles.js'
 import { useNavigation } from '@react-navigation/native'
 
+
 export default function CreateGroup () {
   const navigation = useNavigation()
 
@@ -30,16 +31,15 @@ export default function CreateGroup () {
   let accessCodeToProfile = ""
 
   return (
-    // i am gonna add documentation later so feel free to add comments
     // <ScrollView style={styles.container}>
-    <ImageBackground // img bg should be like the view component and encompass the components inside it
-      source={require('../assets/loginbg.jpg')}
-      opacity={0.3}
+    <ImageBackground 
+      source={require('../assets/bg5.jpg')}
+      opacity={0.2}
       style={[styles.background]}
-      alt='A pretty low saturated image of marble with abstract streaks of burgundy and purple and golden highlights across the center.'
+      alt=''
     >
       <KeyboardAvoidingView style={styles.container}>
-        <Text accessibilityRole='header' style={styles.header}>
+        <Text accessibilityRole='header' style={[styles.header]}>
           Create a group
         </Text>
 
