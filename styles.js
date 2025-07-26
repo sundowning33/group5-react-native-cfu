@@ -92,41 +92,43 @@ export const styles = StyleSheet.create({
   },
   profileBoxView: {
     display: 'flex',
-    flex: 1,
-    flexDirection: 'row',
+    // flex: 1,
+    flexDirection: 'column',
     margin: 5,
     backgroundColor: warmdarkpurplecolor,
-    height: '100%',
+    height: 200,
+    width:"45%",
     padding: 5,
     borderRadius: 20,
+    alignItems: 'center',
     
   },
   profileImgView: {
     // display: flex,
     borderRadius: 55,
-    margin: 10,
+    margin: 5,
     // flex: 1,
-    height: 80,
-    width: 80,
+    height: 100,
+    width: 100,
   },
   profileTextBox:{
-    display: 'flex',
-    flexDirection: 'column',
-    flex: 2,
+    // display: 'flex',
+    // flexDirection: 'column',
+    alignItems: 'center',
+    // flex: 2,
   },
   usernameText:{
-    flex:1,
-    margin: 10,
-    marginBottom: 5,
-    fontSize: 25,
-    color: textDark,
+    // flex:1,
+    margin: 5,
+    fontSize: 20,
+    color: 'white',
     fontFamily: mainFontFam,
   },
   hashtagsText:{
-    flex:2,
-    margin: 5,
-    fontSize: 20,
+    // flex:2,
+    fontSize: 15,
     opacity: 0.4,
+    color: 'white',
     fontFamily: mainFontFam,
   },
   searchBarLine:{
@@ -145,7 +147,6 @@ export const styles = StyleSheet.create({
     fontSize: 15,
     color:'black',
   },
-
     
   // settings screen styles settings screen styles
   settingsBlock: {
@@ -185,4 +186,25 @@ export const styles = StyleSheet.create({
     alignItems: "flex-end",
     flex: 1,
   },
+  // profile image upload
+  imagePick:{
+    width: "85%",
+    backgroundColor: warmdarkpurplecolor,
+    justifyContent: "center",
+    alignContent:"center",
+    alignSelf:"center",
+    borderRadius: 10,
+    padding: 15,
+    marginBottom: 20,
+  }, 
+  musicButton:{
+    borderRadius: 10,
+    marginHorizontal: 100,
+    marginBottom: 10,
+    alignSelf: "center",
+    justifyContent: "center",
+    backgroundColor: "#5A3353",
+    overflow: 'hidden',
+
+  }
 })

@@ -17,8 +17,20 @@ import ExploreScreen from './screens/ExploreScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import SettingsScreen from './screens/SettingsScreen'
 
+import ErrorPage from './screens/ErrorPage.js'
+
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
+
+function ErrorStack(){
+  return(
+    <Stack.Navigator initialRouteName="Explore" >
+        <Stack.Screen name="Explore" component={ExploreScreen} options={{headerShown:false}} />
+        <Stack.Screen name="Error" component={ErrorPage} />
+    </Stack.Navigator>
+
+  )
+}
 
 function MainTabs() {
   return (
@@ -26,13 +38,13 @@ function MainTabs() {
       tabBarActiveTintColor: '#C63B62',
       tabBarInactiveTintColor: '#5A3353',
     }}>
-    
+      
       <Tabs.Screen name="Profile" component={ProfileScreen} options={{
         tabBarIcon: ({ color }) => {
           return <Ionicons name='person' size={20} color={color} />;
         }, headerShown: false
       }} />
-      <Tabs.Screen name="Explore" component={ExploreScreen} options={{
+      <Tabs.Screen name="Explore" component={ErrorStack} options={{
         tabBarIcon: ({ color }) => {
           return <Ionicons name='home' size={20} color={color} />;
         }, headerShown: false
@@ -48,13 +60,13 @@ function MainTabs() {
 
 export default function App() {        
   return (
-        <NavigationContainer>
-          <Stack.Navigator initialRouteName="Login" >
-            <Stack.Screen name="Login" component={LoginScreen} />
-            <Stack.Screen name="Create Group" component={CreateGroup} />
-            <Stack.Screen name="Create Account" component={CreateProfile} />
-            <Stack.Screen name="Tabs" component={MainTabs} />
-          </Stack.Navigator>
-        </NavigationContainer>
-        );
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login" >
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Create Group" component={CreateGroup} />
+        <Stack.Screen name="Create Account" component={CreateProfile} />
+        <Stack.Screen name="Tabs" component={MainTabs} />
+      </Stack.Navigator>
+    </NavigationContainer>
+    );
 }
