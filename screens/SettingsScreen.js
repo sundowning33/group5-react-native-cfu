@@ -20,18 +20,19 @@ export default function SettingsScreen() {
   const [isCollapsedHelp, setIsCollapsedHelp] = useState(true);
   const [isCollapsedAccount, setIsCollapsedAccount] = useState(true);
   const [isCollapsedContact, setIsCollapsedContact] = useState(true);
+  const navigation = useNavigation();
 
   // const colorScheme = useColorScheme()
   // const [isDarkMode, setIsDarkMode] = useState(colorScheme === 'dark')
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  return (
-    <ScrollView>
+  return (  
+    <View style={isDarkMode ? styles.background1 : styles.background2}>
       <ImageBackground
         source={require('../assets/bg5.jpg')}
         opacity={0.6}
-        style={[styles.background]}>
-        <Text accessibilityRole='header' style={[styles.header, {color: "white"}]}>
+        style={styles.background}>
+        <Text accessibilityRole='header' style={[styles.header]}>
           Settings
         </Text>
 
@@ -138,6 +139,6 @@ export default function SettingsScreen() {
           </Text>
         </Collapsible>
       </ImageBackground>
-    </ScrollView>
+    </View>
   );
 }

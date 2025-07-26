@@ -20,7 +20,6 @@ import { useNavigation } from '@react-navigation/native';
 import { ImagePicker } from 'expo-image-picker';
 import { useAudioPlayer } from 'expo-audio';
 
-// expo install expo-image-picker
 
 export default function ProfileScreen() {
   const navigation = useNavigation();
@@ -110,19 +109,18 @@ export default function ProfileScreen() {
             <Text style={styles.buttonText}>More</Text>
           </Pressable>
         </View>
-
-        <View style={{ width: 150, alignSelf: 'center', marginVertical: 10, padding: 10, }}> // i'll move it to styles later
-          '
+        <View style={{ width: '100%', justifyContent: 'center', marginVertical: 10, padding: 10, flexDirection: 'row'}}>           
           <Button
             title="Play Sound"
             onPress={() => player.play()}
-            color="#5A3353"
+            color="#d9d9d9"
             style={styles.musicButton}
           />
+          <View width={14}></View>
           <Button
             title="Replay Sound"
             style={styles.musicButton}
-            color="#5A3353"
+            color="#d9d9d9"
             onPress={() => {
               player.seekTo(0);
               player.play();
@@ -136,17 +134,8 @@ export default function ProfileScreen() {
             <Text style={styles.buttonText}>
               (images associated with the user)
             </Text>
-            {image && (
-              <Image
-                source={{ uri: image }}
-                style={{
-                  width: 250,
-                  height: 200,
-                  marginTop: 10,
-                  alignSelf: 'center',
-                }}
-              />
-            )}
+            {image && <Image source={{ uri: image }} style={{ width: 250, height: 200, marginTop: 10, alignSelf:"center" }} />}
+    
           </Pressable>
         </View>
       </ScrollView>

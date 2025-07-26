@@ -3,32 +3,30 @@ import setIsDarkMode from "./screens/SettingsScreen"
 
 
 const mainFontFam = 'Noto Sans' // i will change it later
-const warmdarkpurplecolor = "#5A3353" // setIsDarkMode ? "purple" : "#5A3353"
+const warmdarkpurplecolor = "#D9D9D9" // setIsDarkMode ? "purple" : "#5A3353"
 const textOnDarkBg = "#fff" // setIsDarkMode? "#000000" : "#ffffff"
 const iconbgcolor = "#bdc0e5" // setIsDarkMode ? "purple" : "#BDC0E5" // BFC6E5
 const textDark = "#000000"// setIsDarkMode? "#ffffff" : "#000000"
 const iconcolor = "#000000"// setIsDarkMode ? "#ffffff" : "#000000"
 
 export const styles = StyleSheet.create({
-    background: {
-    // flex: 1,
+  background: {
+    flex: 1,
+
     resizeMode: 'cover',
-    height: '100%',
-    width: '100%',
   },
-  // background1: {
-  //   // flex: 1,
-  //   height: '100%',
-  //   width: '100%',
-  //   resizeMode: 'cover',
-  //   backgroundColor: 'black'
-  // },
-  //   background2: {
-  //   // flex: 1,
-  //   height: '100%',
-  //   width: '100%',
-  //   resizeMode: 'cover',
-  // },
+  background1: {
+    
+    flex: 1,
+    resizeMode: 'cover',
+    backgroundColor: 'black'
+  },
+    background2: {
+      
+    flex: 1,
+    resizeMode: 'cover',
+    backgroundColor: 'white'
+  },
   container: {
     flex: 1,
     height: '100%'
@@ -37,10 +35,12 @@ export const styles = StyleSheet.create({
   marginTop: 30,
   fontSize: 27,
   fontFamily: mainFontFam,
-  textShadowRadius: 16,
-  textShadowColor: "#ffb6c1",
+  fontStyle: "bold",
+  // textShadowRadius: 16,
+  // textShadowColor: "#ffb6c1",
   // textShadowOffset: { width: 0, height: 2 },
   textAlign: 'center',
+  // backgroundColor: "#d9d9d9",
   },
   textInputContainer: {
     marginHorizontal: 20,
@@ -62,10 +62,10 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     marginHorizontal: 10,
     fontFamily: mainFontFam,
-    color: textOnDarkBg,
+    color: textDark,
   },
   nextButton: {
-    borderRadius: 10,
+    borderRadius: 6,
     padding: 5,
     marginVertical: 5,
     marginHorizontal: 10,
@@ -76,7 +76,7 @@ export const styles = StyleSheet.create({
   buttonText: {
     fontSize: 16,
     fontFamily: mainFontFam,
-    color: textOnDarkBg,
+    color: textDark,
     textAlign: "center",
   },
   linkText: {
@@ -190,8 +190,9 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
     alignSelf: "center",
     justifyContent: "center",
-    backgroundColor: "#5A3353",
+    backgroundColor: "#d9d9d9",
     overflow: 'hidden',
+    color: textDark,
 
   }
 })
