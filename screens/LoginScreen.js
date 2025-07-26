@@ -25,26 +25,25 @@ export default function LoginScreen() {
   const [login, setLogin] = useState('')
   const [password, setPassword] = useState('')
   const [accessCode, setAccessCode] = useState('')
-  
+
   let passwordToProfile = ""
   let loginToProfile = ""
   let accessCodeToProfile = ""
 
   return (
-    // i am gonna add documentation later so feel free to add comments
     // <ScrollView style={styles.container}>
     <ImageBackground // img bg should be like the view component and encompass the components inside it
-      source={require('../assets/loginbg.jpg')}
-      opacity={0.3}
-      style={[styles.background]}
-      alt="A pretty low saturated image of marble with abstract streaks of burgundy and purple and golden highlights across the center."
+      source={require('../assets/bg5.jpg')}
+      opacity={0.5}
+      style={styles.background}
+      alt=''
     >
       <KeyboardAvoidingView style={styles.container}>
-        <Text accessibilityRole='header' style={styles.header}>
+        <Text accessibilityRole='header' style={[styles.header, { color: "white" }]}>
           Log in
         </Text>
 
-        <View style={[styles.textInputContainer]}>
+        <View style={styles.textInputContainer}>
           <Text style={styles.basicText}>Write your email or usename</Text>
           <TextInput
             label='Email or Username'
@@ -52,11 +51,11 @@ export default function LoginScreen() {
             value={login}
             onChangeText={setLogin}
             accessibilityLabel='Email or Username'
-            style={[styles.textInput]}
+            style={styles.textInput}
           />
         </View>
 
-        <View style={[styles.textInputContainer]}>
+        <View style={styles.textInputContainer}>
           <Text style={styles.basicText}>Write your password</Text>
           <TextInput
             label='Password'
@@ -65,11 +64,11 @@ export default function LoginScreen() {
             onChangeText={setPassword}
             secureTextEntry
             accessibilityLabel='Password'
-            style={[styles.textInput]}
+            style={styles.textInput}
           />
         </View>
 
-        <View style={[styles.textInputContainer]}>
+        <View style={styles.textInputContainer}>
           <Text style={styles.basicText}>Write your access code given by an admin</Text>
           <TextInput
             label='Organization Access Code'
@@ -77,7 +76,7 @@ export default function LoginScreen() {
             value={accessCode} // i think all the values should be added from firebase but im making these through nav for now
             onChangeText={setAccessCode}
             accessibilityLabel='Organization Access Code'
-            style={[styles.textInput]}
+            style={styles.textInput}
           />
         </View>
 

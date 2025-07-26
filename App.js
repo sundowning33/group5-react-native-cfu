@@ -1,7 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
+
+import { AntDesign } from '@expo/vector-icons';
+// import Ionicons from '@expo/vector-icons/Ionicons';
+// import { Ionicons } from '@expo/vector-icons';
+
 
 
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
@@ -28,17 +32,17 @@ function MainTabs() {
     }}>
       <Tabs.Screen name="Explore" component={ExploreScreen} options={{
         tabBarIcon: ({ color }) => {
-          return <Ionicons name='home' size={20} color={color} />;
+          return <AntDesign name='home' size={20} color={color} />;
         }
       }} />
       <Tabs.Screen name="Profile" component={ProfileScreen} options={{
         tabBarIcon: ({ color }) => {
-          return <Ionicons name='person' size={20} color={color} />;
+          return <AntDesign name='user' size={20} color={color} />;
         }
       }} />
       <Tabs.Screen name="Settings" component={SettingsScreen} options={{
         tabBarIcon: ({ color }) => {
-          return <Ionicons name='settings' size={20} color={color} />;
+          return <AntDesign name='setting' size={20} color={color} />;
         }, headerShown: false
       }} />
     </Tabs.Navigator>
@@ -48,7 +52,7 @@ function MainTabs() {
 export default function App() {        
   return (
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="Login" >
+          <Stack.Navigator initialRouteName="Create Group" >
             <Stack.Screen name="Login" component={LoginScreen} />
             <Stack.Screen name="Create Group" component={CreateGroup} />
             <Stack.Screen name="Create Account" component={CreateProfile} />

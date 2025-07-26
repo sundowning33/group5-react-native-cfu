@@ -1,6 +1,7 @@
 import { StyleSheet, useColorScheme } from 'react-native'
 import setIsDarkMode from "./screens/SettingsScreen"
 
+
 const mainFontFam = 'Noto Sans' // i will change it later
 const warmdarkpurplecolor = "#5A3353" // setIsDarkMode ? "purple" : "#5A3353"
 const textOnDarkBg = "#fff" // setIsDarkMode? "#000000" : "#ffffff"
@@ -9,29 +10,37 @@ const textDark = "#000000"// setIsDarkMode? "#ffffff" : "#000000"
 const iconcolor = "#000000"// setIsDarkMode ? "#ffffff" : "#000000"
 
 export const styles = StyleSheet.create({
-  //Stelmakh: Login page, maybe some other pages
-  background: {
-    // flex: 1,
+    background: {
+    flex: 1,
+    // resizeMode: 'cover',
     height: '100%',
     width: '100%',
-    resizeMode: 'cover',
-
   },
+  // background1: {
+  //   // flex: 1,
+  //   height: '100%',
+  //   width: '100%',
+  //   resizeMode: 'cover',
+  //   backgroundColor: 'black'
+  // },
+  //   background2: {
+  //   // flex: 1,
+  //   height: '100%',
+  //   width: '100%',
+  //   resizeMode: 'cover',
+  // },
   container: {
-    // flex: 1,
+    flex: 1,
     height: '100%'
   },
   header: {
-    marginTop: 30,
-    // alignItems: 'center',
-    // alignContent: 'center',
-    justifyContent: 'center',
-    fontSize: 25,
-    fontFamily: mainFontFam,
-    textShadowRadius: 2,
-    textShadowColor: textDark,
-    textShadowOffset: { width: 1, height: 1 },
-    textAlign: 'center'
+  marginTop: 30,
+  fontSize: 27,
+  fontFamily: mainFontFam,
+  textShadowRadius: 16,
+  textShadowColor: "#ffb6c1",
+  // textShadowOffset: { width: 0, height: 2 },
+  textAlign: 'center',
   },
   textInputContainer: {
     marginHorizontal: 20,
@@ -50,7 +59,6 @@ export const styles = StyleSheet.create({
   },
   basicText: {
     marginTop: 10,
-    justifyContent: 'center',
     fontSize: 16,
     marginHorizontal: 10,
     fontFamily: mainFontFam,
@@ -66,16 +74,16 @@ export const styles = StyleSheet.create({
     width: "15%",
   },
   buttonText: {
-    justifyContent: 'center',
     fontSize: 16,
     fontFamily: mainFontFam,
     color: textOnDarkBg,
     textAlign: "center",
   },
   linkText: {
-    color: "blue",
+    color: "#2323ff",
     padding: 5,
     marginLeft: 20,
+    // backgroundColor: 
 
   },
   switch: {
@@ -137,10 +145,9 @@ export const styles = StyleSheet.create({
   settingsText: {
     marginVertical: 5,
     marginHorizontal: 10,
-    justifyContent: 'center',
     fontSize: 18,
     fontFamily: mainFontFam,
-    color: textDark,
+    color: textOnDarkBg,
   },
   collapsedContent: {
     marginVertical: 5,
@@ -149,7 +156,7 @@ export const styles = StyleSheet.create({
     marginLeft: 75,
     marginRight: 40,
     fontFamily: mainFontFam,
-    color: textDark,
+    color: textOnDarkBg,
   },
   settingsIcon: {
     fontSize: 20,
@@ -161,8 +168,30 @@ export const styles = StyleSheet.create({
     backgroundColor: iconbgcolor,
   },
   settingsSwitch: {
-    alignItems: "flex-end",
-    flex: 1,
+    marginLeft: 'auto',
   },
-  // Stelmakh: I'll make the Profile page too, since Sofia isn't with us anymore
+  
+
+
+  // profile image upload
+  imagePick:{
+    width: "85%",
+    backgroundColor: warmdarkpurplecolor,
+    justifyContent: "center",
+    alignContent:"center",
+    alignSelf:"center",
+    borderRadius: 10,
+    padding: 15,
+    marginBottom: 20,
+  }, 
+  musicButton:{
+    borderRadius: 10,
+    marginHorizontal: 100,
+    marginBottom: 10,
+    alignSelf: "center",
+    justifyContent: "center",
+    backgroundColor: "#5A3353",
+    overflow: 'hidden',
+
+  }
 })
