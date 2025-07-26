@@ -13,8 +13,6 @@ import useNavigation from "@react-navigation/native"
 
 import Collapsible from 'react-native-collapsible';
 import { AntDesign } from '@expo/vector-icons';
-// import Ionicons from '@expo/vector-icons/Ionicons';
-// import { Ionicons } from '@expo/vector-icons';
 import { Divider } from 'react-native-paper';
 
 export default function SettingsScreen() {
@@ -127,13 +125,16 @@ export default function SettingsScreen() {
             Mariia Semerei: mariiasemerei@gmail.com OR sundowning33 on GitHub
           </Text>
           <Text style={styles.collapsedContent}>
-            Sofiia Kaiuk:
+            Sofiia Kaiuk
           </Text>
           <Text style={styles.collapsedContent}>
-            Sofia Krasovska:
+            Sofia Krasovska:krasovskasofia23@gmail.com
           </Text>
           <Text style={styles.collapsedContent}>
             Anna Stelmakh: nimthecloud05@gmail.com OR CloudyCat05 on GitHub
+          </Text>
+          <Text style={styles.collapsedContent}>
+            Mykhailo Ivanov
           </Text>
         </Collapsible>
       </ImageBackground>

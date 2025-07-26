@@ -3,8 +3,6 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { AntDesign } from '@expo/vector-icons';
-// import Ionicons from '@expo/vector-icons/Ionicons';
-// import { Ionicons } from '@expo/vector-icons';
 
 
 

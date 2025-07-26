@@ -11,8 +11,8 @@ const iconcolor = "#000000"// setIsDarkMode ? "#ffffff" : "#000000"
 
 export const styles = StyleSheet.create({
     background: {
-    flex: 1,
-    // resizeMode: 'cover',
+    // flex: 1,
+    resizeMode: 'cover',
     height: '100%',
     width: '100%',
   },
