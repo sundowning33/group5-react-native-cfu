@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { useState } from 'react';
 import { styles } from '../styles.js';
-import useNavigation from "@react-navigation/native"
+// import useNavigation from "@react-navigation/native"
 
 import Collapsible from 'react-native-collapsible';
 import { AntDesign } from '@expo/vector-icons';
@@ -20,7 +20,8 @@ export default function SettingsScreen() {
   const [isCollapsedHelp, setIsCollapsedHelp] = useState(true);
   const [isCollapsedAccount, setIsCollapsedAccount] = useState(true);
   const [isCollapsedContact, setIsCollapsedContact] = useState(true);
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
+  
 
   // const colorScheme = useColorScheme()
   // const [isDarkMode, setIsDarkMode] = useState(colorScheme === 'dark')
@@ -32,12 +33,12 @@ export default function SettingsScreen() {
         source={require('../assets/bg5.jpg')}
         opacity={0.6}
         style={styles.background}>
-        <Text accessibilityRole='header' style={[styles.header]}>
+        <Text accessibilityRole='header' style={[styles.header, , { color: 'white' }]}>
           Settings
         </Text>
 
         <View style={[styles.settingsBlock]}>
-          <AntDesign name="bulb-outline" style={styles.settingsIcon} />
+          <AntDesign name="contrast" style={styles.settingsIcon} />
           <Text style={[styles.settingsText]}>Dark Mode</Text>
           <Switch
             value={isDarkMode}
@@ -72,7 +73,7 @@ export default function SettingsScreen() {
           <TouchableOpacity
             onPress={() => setIsCollapsedHelp(!isCollapsedHelp)}
             style={styles.settingsBlock}>
-            <AntDesign name="questioncircleo" style={styles.settingsIcon} />
+            <AntDesign name="rocket1" style={styles.settingsIcon} />
             <Text style={[styles.settingsText]}>Help & FAQ</Text>
           </TouchableOpacity>
 
@@ -93,7 +94,7 @@ export default function SettingsScreen() {
           onPress={() => setIsCollapsedAccount(!isCollapsedAccount)}
           style={styles.settingsBlock}>
           <AntDesign
-            name="rocketo"
+            name="adduser"
             size={20}
             style={styles.settingsIcon}
           />
@@ -102,7 +103,7 @@ export default function SettingsScreen() {
 
         <Collapsible collapsed={isCollapsedAccount}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('Login')}
+            // onPress={() => navigation.navigate('Login')}
             accessibilityRole="link">
             <Text style={styles.collapsedContent}>Log out</Text>
           </TouchableOpacity>
@@ -117,7 +118,7 @@ export default function SettingsScreen() {
         <TouchableOpacity
           onPress={() => setIsCollapsedContact(!isCollapsedContact)}
           style={styles.settingsBlock}>
-          <AntDesign name="addusero" style={styles.settingsIcon} />
+          <AntDesign name="adduser" style={styles.settingsIcon} />
           <Text style={[styles.settingsText]}>Contact us</Text>{' '}
         </TouchableOpacity>
 

@@ -2,7 +2,7 @@ import { StyleSheet, useColorScheme } from 'react-native'
 import setIsDarkMode from "./screens/SettingsScreen"
 
 
-const mainFontFam = 'Noto Sans' // i will change it later
+const mainFontFam = 'San Francisco' // i will change it later
 const warmdarkpurplecolor = "#D9D9D9" // setIsDarkMode ? "purple" : "#5A3353"
 const textOnDarkBg = "#fff" // setIsDarkMode? "#000000" : "#ffffff"
 const iconbgcolor = "#bdc0e5" // setIsDarkMode ? "purple" : "#BDC0E5" // BFC6E5

@@ -22,7 +22,6 @@ import { useAudioPlayer } from 'expo-audio';
 
 
 export default function ProfileScreen() {
-  const navigation = useNavigation();
   const [login, setLogin] = useState('');
   const [fullname, setFullName] = useState('');
   const [birthday, setBirthday] = useState('');
