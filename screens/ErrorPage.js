@@ -12,9 +12,8 @@ import { useNavigation } from '@react-navigation/native'
 export default function ErrorPage() {
     const navigation = useNavigation()
     return (
-        <View>
-            <Text>Page not found</Text>
-            
+        <View style={styles.container}>
+            <Text style={styles.errorText}>This profiile page got lost. Help us find it?</Text>
         </View>
   );
 }

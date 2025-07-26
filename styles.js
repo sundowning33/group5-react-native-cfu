@@ -93,7 +93,7 @@ export const styles = StyleSheet.create({
   profileBoxView: {
     display: 'flex',
     // flex: 1,
-    flexDirection: 'column',
+    // flexDirection: 'column',
     margin: 5,
     backgroundColor: warmdarkpurplecolor,
     height: 200,
@@ -107,6 +107,7 @@ export const styles = StyleSheet.create({
     // display: flex,
     borderRadius: 55,
     margin: 5,
+    alignSelf:'center',
     // flex: 1,
     height: 100,
     width: 100,
@@ -146,6 +147,14 @@ export const styles = StyleSheet.create({
     fontFamily: mainFontFam,
     fontSize: 15,
     color:'black',
+  },
+
+  // error
+
+  errorText:{
+    fontFamily: mainFontFam,
+    fontSize: 40,
+    color: warmdarkpurplecolor,
   },
     
   // settings screen styles settings screen styles

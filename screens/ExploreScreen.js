@@ -23,15 +23,15 @@ import { useNavigation } from '@react-navigation/native'
 function ProfileBlock({profilepic, usersname, hashtags}){
     const navigation = useNavigation()
     return(
-        <View style={styles.profileBoxView}>
-            <Pressable onPress={() => navigation.navigate('Error')} accessibilityRole='button'>
+        <TouchableOpacity style={styles.profileBoxView} onPress={() => navigation.navigate('Error')} accessibilityRole='button'>
+            <View>
                 <Image style={styles.profileImgView} source={profilepic}/>
-            </Pressable>
-            <View style={styles.profileTextBox}>
-                <Text style={styles.usernameText}>{usersname}</Text>
-                <Text style={styles.hashtagsText}>{hashtags}</Text>
+                <View style={styles.profileTextBox}>
+                    <Text style={styles.usernameText}>{usersname}</Text>
+                    <Text style={styles.hashtagsText}>{hashtags}</Text>
+                </View>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 }
 
