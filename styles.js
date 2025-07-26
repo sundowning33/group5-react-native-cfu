@@ -102,7 +102,7 @@ export const styles = StyleSheet.create({
     // flex: 1,
     // flexDirection: 'column',
     margin: 5,
-    backgroundColor: warmdarkpurplecolor,
+    backgroundColor:'#5A3353',
     height: 200,
     width:"45%",
     padding: 5,
@@ -140,7 +140,7 @@ export const styles = StyleSheet.create({
     fontFamily: mainFontFam,
   },
   searchBarLine:{
-    backgroundColor:warmdarkpurplecolor,
+    backgroundColor:'#5A3353',
     height:50,
     padding:5,
   },

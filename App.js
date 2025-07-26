@@ -40,7 +40,7 @@ function MainTabs() {
       tabBarActiveTintColor: '#C63B62',
       tabBarInactiveTintColor: '#5A3353',
     }}>
-      <Tabs.Screen name="Explore" component={ExploreScreen} options={{
+      <Tabs.Screen name="Explore" component={ErrorStack} options={{
         tabBarIcon: ({ color }) => {
           return <AntDesign name='home' size={20} color={color} />;
         }, headerShown: false
@@ -49,11 +49,6 @@ function MainTabs() {
         tabBarIcon: ({ color }) => {
           return <AntDesign name='user' size={20} color={color} />;
         }, headerShown: false}}/>
-      <Tabs.Screen name="Explore" component={ErrorStack} options={{
-        tabBarIcon: ({ color }) => {
-          return <Ionicons name='home' size={20} color={color} />;
-        }, headerShown: false
-      }} />
       <Tabs.Screen name="Settings" component={SettingsScreen} options={{
         tabBarIcon: ({ color }) => {
           return <AntDesign name='setting' size={20} color={color} />;
