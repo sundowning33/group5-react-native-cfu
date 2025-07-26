@@ -1,5 +1,6 @@
 export const userData = ({
     userOne:{
+        profileimg: '../assets/bg8.jpg',
         usernames:'sundowning33',
         hashtag:'#music, #sleep token, #coding'
     },
